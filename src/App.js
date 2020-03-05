@@ -1,26 +1,42 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from 'react'
+import { Row, Column } from './components/Layout'
+import Visor from './components/Visor'
+import Button from './components/Button'
 
-function App() {
+import './App.css'
+
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <Column className='container'>
+      <Row>
+        <Visor />
+      </Row>
+      <Row>
+        <Button digit='7' />
+        <Button digit='8' />
+        <Button digit='9' />
+        <Button digit='÷' />
+      </Row>
+      <Row>
+        <Button digit='4' />
+        <Button digit='5' />
+        <Button digit='6' />
+        <Button digit='x' />
+      </Row>
+      <Row>
+        <Button digit='1' />
+        <Button digit='2' />
+        <Button digit='3' />
+        <Button digit='-' />
+      </Row>
+      <Row>
+        <Button digit='0' />
+        <Button digit=',' />
+        <Button digit='=' />
+        <Button digit='+' />
+      </Row>
+    </Column>
+  )
 }
 
-export default App;
+export default App
